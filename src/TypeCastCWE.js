@@ -1,5 +1,5 @@
 import { PrimitiveDataType, ComplexDataType } from "@healthcare-interoperability/hl7v2-core";
-import { CE, CWE } from "@healthcare-interoperability/hl7v2-datatypes";
+import { CE, CNE, CWE } from "@healthcare-interoperability/hl7v2-datatypes";
 import { HL7DataTypeCast } from "./HL7DataTypeCast";
 
 /**
@@ -24,6 +24,8 @@ export class TypeCastCWE extends HL7DataTypeCast {
         if (this.dataInstance instanceof CWE) {
             return this.dataInstance;
         } else if (this.dataInstance instanceof CE) {
+            return new CWE(this.dataInstance.toJSON(), this._prepareConfigs(version));
+        } else if (this.dataInstance instanceof CNE) {
             return new CWE(this.dataInstance.toJSON(), this._prepareConfigs(version));
         } else if (this.dataInstance instanceof PrimitiveDataType) {
             return new CWE(this._handlePrimitiveData(), this._prepareConfigs(version));
