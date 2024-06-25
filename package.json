@@ -1,6 +1,6 @@
 {
   "name": "@healthcare-interoperability/hl7v2-typecast",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Typecast module for HL7v2 message",
   "main": "dist/index.js",
   "scripts": {
