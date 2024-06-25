@@ -7,3 +7,4 @@ export { TypeCastXCN } from './TypeCastXCN.js';
 export { TypeCastXTN } from './TypeCastXTN.js';
 export { TypeCastSAD } from './TypeCastSAD.js';
 export { TypeCastHD } from './TypeCastHD.js';
+export { TypeCastPL } from './TypeCastPL.js';
